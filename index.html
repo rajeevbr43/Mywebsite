@@ -1,72 +1,132 @@
-<!DOCTYPE html>
+
+   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rajeev Raj | Freelancer</title>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f4f6f9;
+    * {
       margin: 0;
       padding: 0;
-      color: #333;
-      text-align: center;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-    header {
-      background: linear-gradient(135deg, #007bff, #00c6ff);
-      color: white;
-      padding: 50px 20px;
-      border-radius: 0 0 40px 40px;
-    }
-    h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    h2 { font-weight: 400; color: #e0e0e0; }
 
-    section {
-      margin: 40px 20px;
-    }
-    .skills {
+    body {
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #222;
       display: flex;
       justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
     }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border: 4px solid #2196f3;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 400px;
+      margin: 0 auto 25px;
+      color: #444;
+    }
+
+    .skills {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+
     .skill {
-      background: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    a {
-      text-decoration: none;
+      background: #2196f3;
       color: white;
-      background: #007bff;
-      padding: 10px 20px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    .insta-btn {
+      background: #e4405f;
+      color: white;
+      padding: 10px 25px;
+      border: none;
       border-radius: 25px;
-      display: inline-block;
-      margin-top: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: 0.3s;
+      box-shadow: 0 3px 8px rgba(228, 64, 95, 0.3);
+    }
+
+    .insta-btn:hover {
+      background: #c13584;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Rajeev Raj</h1>
-    <h2>Freelancer</h2>
-  </header>
+  <div class="profile-pic">
+    <img src="https://drive.google.com/uc?export=view&id=1pXXsWtkAa7Bu8KN8ZgBUOPQOUtGylNdU" alt="Rajeev Raj">
+  </div>
 
-  <section>
-    <p>I am always ready to help you — just give me a sign 😉</p>
-    <div class="skills">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-    </div>
+  <h1>Rajeev Raj</h1>
+  <h2>Freelancer</h2>
 
-    <a href="https://www.instagram.com/__rajeev__7__?igsh=MWp5dmp4OXRoNDkw" target="_blank">
-      Connect on Instagram
-    </a>
-  </section>
+  <p>I am always ready to help you — just give me a sign 😉</p>
+
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+  </div>
+
+  <a class="insta-btn" href="https://www.instagram.com/__rajeev__7__?igsh=MWp5dmp4OXRoNDkw" target="_blank">
+    Connect on Instagram
+  </a>
+
+  <footer>
+    © 2025 Rajeev Raj | All Rights Reserved
+  </footer>
 
 </body>
 </html>

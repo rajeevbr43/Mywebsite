@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajeev Raj | Freelancer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #fff;
+      line-height: 1.6;
+      text-align: center;
+      padding: 30px;
+    }
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #38bdf8;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+    }
+
+    section {
+      margin: 40px 0;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: #38bdf8;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 50px;
+      color: #94a3b8;
+    }
+
+    footer a {
+      color: #38bdf8;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rajeev Raj</h1>
+    <p>Freelancer</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p style="margin-top: 10px;">
+      I am always ready for you, just give me a sign.
+    </p>
+  </section>
+
+  <section>
+    <h2>My Skills</h2>
+    <div class="skills" style="margin-top: 15px;">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Connect with Me</h2>
+    <p style="margin-top: 10px;">
+      <a href="https://www.instagram.com/__rajeev__7__?igsh=MWp5dmp4OXRoNDkw" target="_blank">
+        Instagram Profile
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Rajeev Raj | All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

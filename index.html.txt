@@ -1,122 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rajeev Raj | Freelancer</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajeev Raj - Freelancer Portfolio</title>
+    <style>
+        /*
+        * 1. मुख्य स्टाइल और पृष्ठभूमि (Background)
+        */
+        body {
+            /* हल्के नीले से सफेद रंग का पृष्ठभूमि ग्रेडिएंट */
+            background: linear-gradient(to bottom, #f0f8ff, #ffffff);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* सामग्री को क्षैतिज रूप से केंद्रित करें */
+            align-items: center; /* सामग्री को लंबवत रूप से केंद्रित करें */
+            min-height: 100vh; /* पूरी स्क्रीन की ऊँचाई लें */
+            color: #333;
+            text-align: center;
+        }
 
-    body {
-      background: #0f172a;
-      color: #fff;
-      line-height: 1.6;
-      text-align: center;
-      padding: 30px;
-    }
+        .container {
+            width: 100%;
+            max-width: 400px; /* मोबाइल लुक के लिए चौड़ाई सीमित करें */
+            padding: 30px 20px;
+        }
 
-    header {
-      margin-bottom: 40px;
-    }
+        /*
+        * 2. प्रोफाइल पिक्चर स्टाइल
+        */
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* नीले रंग का एक हल्का सा बॉर्डर/रिंग प्रभाव */
+            border: 4px solid #fff; 
+            box-shadow: 0 0 0 8px rgba(0, 123, 255, 0.1); 
+            background-color: white; /* सुनिश्चित करें कि इमेज के बाहर का क्षेत्र सफेद दिखे */
+        }
 
-    header h1 {
-      font-size: 2.5rem;
-      color: #38bdf8;
-    }
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover; /* इमेज को गोलाकार फ्रेम में फिट करता है */
+        }
 
-    header p {
-      font-size: 1.2rem;
-      color: #94a3b8;
-    }
+        /*
+        * 3. टेक्स्ट स्टाइल
+        */
+        h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
 
-    section {
-      margin: 40px 0;
-    }
+        .title {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
 
-    .skills {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+        .tagline {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 35px;
+        }
 
-    .skill {
-      background: #1e293b;
-      padding: 10px 20px;
-      border-radius: 10px;
-      color: #38bdf8;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+        /*
+        * 4. स्किल बैज स्टाइल
+        */
+        .badges {
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-    .skill:hover {
-      background: #38bdf8;
-      color: #0f172a;
-    }
+        .badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
+        /* नए स्किल्स के लिए रंग */
+        .badge.coding { background-color: #3498db; } /* नीला */
+        .badge.photo-editing { background-color: #e74c3c; }  /* लाल */
+        .badge.prompt-writing { background-color: #2ecc71; } /* हरा */
 
-    a:hover {
-      text-decoration: underline;
-    }
+        /*
+        * 5. इंस्टाग्राम बटन स्टाइल
+        */
+        .insta-button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #e94e77; /* गहरा गुलाबी/लाल रंग */
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px; /* गोल कोने */
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
 
-    footer {
-      margin-top: 50px;
-      color: #94a3b8;
-    }
-
-    footer a {
-      color: #38bdf8;
-    }
-
-    footer a:hover {
-      color: #fff;
-    }
-  </style>
+        .insta-button:hover {
+            background-color: #d13a61;
+        }
+        
+        /*
+        * 6. कॉपीराइट टेक्स्ट
+        */
+        .copyright {
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #a0a0a0;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Rajeev Raj</h1>
-    <p>Freelancer</p>
-  </header>
+    <div class="container">
+        
+        <div class="profile-pic">
+            <img src="https://via.placeholder.com/160" alt="Rajeev Raj">
+        </div>
+        
+        <h1>Rajeev Raj</h1>
+        <p class="title">Freelancer</p>
+        
+        <p class="tagline">I am always ready to help you — just give me a sign 😉</p>
+        
+        <div class="badges">
+            <span class="badge coding">Coding</span>
+            <span class="badge photo-editing">Photo Editing</span>
+            <span class="badge prompt-writing">Prompt Writing</span>
+        </div>
+        
+        <a href="https://www.instagram.com/your_handle" target="_blank" class="insta-button">
+            Connect on Instagram
+        </a>
+        
+        <p class="copyright">© 2025 Rajeev Raj | All Rights Reserved</p>
 
-  <section>
-    <h2>About Me</h2>
-    <p style="margin-top: 10px;">
-      I am always ready for you, just give me a sign.
-    </p>
-  </section>
-
-  <section>
-    <h2>My Skills</h2>
-    <div class="skills" style="margin-top: 15px;">
-      <div class="skill">Coding</div>
-      <div class="skill">Photo Editing</div>
-      <div class="skill">Prompt Writer</div>
     </div>
-  </section>
-
-  <section>
-    <h2>Connect with Me</h2>
-    <p style="margin-top: 10px;">
-      <a href="https://www.instagram.com/__rajeev__7__?igsh=MWp5dmp4OXRoNDkw" target="_blank">
-        Instagram Profile
-      </a>
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 Rajeev Raj | All rights reserved.</p>
-  </footer>
 
 </body>
 </html>

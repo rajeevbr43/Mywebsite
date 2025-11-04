@@ -1,132 +1,159 @@
-
-   <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rajeev Raj | Freelancer</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajeev Raj - Freelancer Portfolio</title>
+    <style>
+        /*
+        * 1. मुख्य स्टाइल और पृष्ठभूमि (Background)
+        */
+        body {
+            /* हल्के नीले से सफेद रंग का पृष्ठभूमि ग्रेडिएंट */
+            background: linear-gradient(to bottom, #f0f8ff, #ffffff);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* सामग्री को क्षैतिज रूप से केंद्रित करें */
+            align-items: center; /* सामग्री को लंबवत रूप से केंद्रित करें */
+            min-height: 100vh; /* पूरी स्क्रीन की ऊँचाई लें */
+            color: #333;
+            text-align: center;
+        }
 
-    body {
-      background: linear-gradient(135deg, #e0f7fa, #ffffff);
-      color: #222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      min-height: 100vh;
-      text-align: center;
-    }
+        .container {
+            width: 100%;
+            max-width: 400px; /* मोबाइल लुक के लिए चौड़ाई सीमित करें */
+            padding: 30px 20px;
+        }
 
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-bottom: 20px;
-      border: 4px solid #2196f3;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      transition: 0.3s;
-    }
+        /*
+        * 2. प्रोफाइल पिक्चर स्टाइल
+        */
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* नीले रंग का एक हल्का सा बॉर्डर/रिंग प्रभाव */
+            border: 4px solid #fff; 
+            box-shadow: 0 0 0 8px rgba(0, 123, 255, 0.1); 
+            background-color: white; /* सुनिश्चित करें कि इमेज के बाहर का क्षेत्र सफेद दिखे */
+        }
 
-    .profile-pic:hover {
-      transform: scale(1.05);
-    }
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover; /* इमेज को गोलाकार फ्रेम में फिट करता है */
+        }
 
-    .profile-pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        /*
+        * 3. टेक्स्ट स्टाइल
+        */
+        h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 5px;
-    }
+        .title {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
 
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: #555;
-      margin-bottom: 15px;
-    }
+        .tagline {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 35px;
+        }
 
-    p {
-      font-size: 1rem;
-      max-width: 400px;
-      margin: 0 auto 25px;
-      color: #444;
-    }
+        /*
+        * 4. स्किल बैज स्टाइल
+        */
+        .badges {
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-    .skills {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 25px;
-    }
+        .badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    .skill {
-      background: #2196f3;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
+        /* नए स्किल्स के लिए रंग */
+        .badge.coding { background-color: #3498db; } /* नीला */
+        .badge.photo-editing { background-color: #e74c3c; }  /* लाल */
+        .badge.prompt-writing { background-color: #2ecc71; } /* हरा */
 
-    .insta-btn {
-      background: #e4405f;
-      color: white;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 25px;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: 0.3s;
-      box-shadow: 0 3px 8px rgba(228, 64, 95, 0.3);
-    }
+        /*
+        * 5. इंस्टाग्राम बटन स्टाइल
+        */
+        .insta-button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #e94e77; /* गहरा गुलाबी/लाल रंग */
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px; /* गोल कोने */
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
 
-    .insta-btn:hover {
-      background: #c13584;
-      transform: scale(1.05);
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.8rem;
-      color: #666;
-    }
-  </style>
+        .insta-button:hover {
+            background-color: #d13a61;
+        }
+        
+        /*
+        * 6. कॉपीराइट टेक्स्ट
+        */
+        .copyright {
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #a0a0a0;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="profile-pic">
-    <img src="Gemini_Generated_Image_v2sab5v2sab5v2sa.png" alt="Rajeev Raj">
-  </div>
+    <div class="container">
+        
+        <div class="profile-pic">
+            <img src="https://via.placeholder.com/160" alt="Rajeev Raj">
+        </div>
+        
+        <h1>Rajeev Raj</h1>
+        <p class="title">Freelancer</p>
+        
+        <p class="tagline">I am always ready to help you — just give me a sign 😉</p>
+        
+        <div class="badges">
+            <span class="badge coding">Coding</span>
+            <span class="badge photo-editing">Photo Editing</span>
+            <span class="badge prompt-writing">Prompt Writing</span>
+        </div>
+        
+        <a href="https://www.instagram.com/your_handle" target="_blank" class="insta-button">
+            Connect on Instagram
+        </a>
+        
+        <p class="copyright">© 2025 Rajeev Raj | All Rights Reserved</p>
 
-  <h1>Rajeev Raj</h1>
-  <h2>Freelancer</h2>
-
-  <p>I am always ready to help you — just give me a sign 😉</p>
-
-  <div class="skills">
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-  </div>
-
-  <a class="insta-btn" href="https://www.instagram.com/__rajeev__7__?igsh=MWp5dmp4OXRoNDkw" target="_blank">
-    Connect on Instagram
-  </a>
-
-  <footer>
-    © 2025 Rajeev Raj | All Rights Reserved
-  </footer>
+    </div>
 
 </body>
 </html>

@@ -99,9 +99,9 @@
   <section>
     <h2>My Skills</h2>
     <div class="skills" style="margin-top: 15px;">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
+      <div class="skill">Coding</div>
+      <div class="skill">Photo Editing</div>
+      <div class="skill">Prompt Writer</div>
     </div>
   </section>
 
